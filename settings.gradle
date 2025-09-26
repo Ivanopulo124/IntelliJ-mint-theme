@@ -1,0 +1,14 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+
+        // Репозиторий JetBrains для плагинов IntelliJ Platform
+        maven { url = 'https://oss.sonatype.org/content/repositories/snapshots/' }
+
+        // Репозиторий JetBrains
+        maven { url = 'https://cache-redirector.jetbrains.com/intellij-dependencies' }
+    }
+}
+
+rootProject.name = 'mint-theme'

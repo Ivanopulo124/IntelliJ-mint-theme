@@ -1,0 +1,85 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.22'
+    id 'org.jetbrains.intellij' version '1.17.4'
+}
+
+group = 'com.ivanopulo124'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+// Настройка совместимости с JDK 21+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+// Настройки плагина IntelliJ
+intellij {
+    version = '2024.1' // Версия IDE для сборки
+    type = 'IC' // IntelliJ IDEA Community Edition
+
+    // Скачивание исходников для отладки
+    downloadSources = true
+
+    // Плагины, которые нужны для разработки (пустой список для темы)
+    plugins = []
+}
+
+// Задачи для патча plugin.xml
+patchPluginXml {
+    sinceBuild = '241' // Минимальная версия IDE (2024.1)
+    untilBuild = '251.*' // Максимальная версия IDE (2025.1.*)
+
+    // Эти значения будут взяты из plugin.xml, но можно переопределить здесь
+    // version = project.version
+    // pluginDescription = """Светлая мятная тема для PhpStorm"""
+}
+
+// Настройки для публикации (оставляем пустыми пока)
+publishPlugin {
+    // token = System.getenv("PUBLISH_TOKEN")
+}
+
+// Настройки для подписи плагина (опционально)
+signPlugin {
+    // certificateChain = System.getenv("CERTIFICATE_CHAIN")
+    // privateKey = System.getenv("PRIVATE_KEY")
+    // password = System.getenv("PRIVATE_KEY_PASSWORD")
+}
+
+// Настройки проверки плагина
+runPluginVerifier {
+    ideVersions = ['2024.1', '2024.2']
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.compilerArgs += ['-Xlint:unchecked', '-Xlint:deprecation']
+}
+
+// Конфигурация KotlinCompile, если нужно
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions.jvmTarget = '21'
+}
+
+// И т. д. для runIde или других – тоже на верхнем уровне:
+tasks.named('runIde') {
+    jvmArgs = ['-Xmx2g', '-Xms512m']
+}
+
+// Зависимости
+dependencies {
+    // Зависимости для тестирования (если нужно)
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+}
+
+// Настройки Gradle Wrapper (автоматически созданные)
+wrapper {
+    gradleVersion = '8.5'
+    distributionType = Wrapper.DistributionType.ALL
+}
