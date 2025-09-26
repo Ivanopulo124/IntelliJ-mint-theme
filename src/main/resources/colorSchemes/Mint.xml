@@ -1,296 +1,134 @@
 <scheme name="Mint" version="142" parent_scheme="Default">
     <colors>
-        <option name="EDITOR_BACKGROUND" value="F0F4F0"/>
-        <option name="CARET_COLOR" value="2B4B2B"/>
-        <option name="CARET_ROW_COLOR" value="E8ECE8"/>
-        <option name="CONSOLE_BACKGROUND_KEY" value="F9FBF1"/>
-        <option name="GUTTER_BACKGROUND" value="E8ECE8"/>
-        <option name="INDENT_GUIDE" value="E8ECE8"/>
-        <option name="LINE_NUMBERS_COLOR" value="8A9B8A"/>
-        <option name="RIGHT_MARGIN_COLOR" value="E8ECE8"/>
+        <!-- Основные цвета -->
+        <option name="EDITOR_BACKGROUND" value="E0E4E0"/>
+        <option name="CARET_COLOR" value="1A3A1A"/>
+        <option name="CARET_ROW_COLOR" value="D8DCD8"/>
+        <option name="CONSOLE_BACKGROUND_KEY" value="E8ECE8"/>
+        <option name="GUTTER_BACKGROUND" value="D8DCD8"/>
+        <option name="LINE_NUMBERS_COLOR" value="6A7B6A"/>
+
+        <!-- Цвета выделения -->
         <option name="SELECTION_BACKGROUND" value="A4D595"/>
-        <option name="SELECTION_FOREGROUND" value="2B4B2B"/>
-        <option name="TEARLINE_COLOR" value="F0F4F0"/>
-        <option name="WHITESPACES" value="D0D0D0"/>
-        <option name="ADDED_LINES_COLOR" value="3A672F"/>
-        <option name="DELETED_LINES_COLOR" value="A85A5A"/>
-        <option name="MODIFIED_LINES_COLOR" value="8A7A5A"/>
-        <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="F8F5F0"/>
-        <option name="MATCHED_BRACE_ATTRIBUTES" value="E4EBDD"/>
-        <option name="TEXT_SEARCH_RESULT_ATTRIBUTES" value="E4EBDD"/>
-        <option name="ERRORS_ATTRIBUTES" value="A85A5A"/>
-        <option name="WARNING_ATTRIBUTES" value="8A7A5A"/>
-        <option name="INFO_ATTRIBUTES" value="5A7A9A"/>
-        <option name="DOC_COMMENT_GUIDE" value="F0F8F8"/>
-        <option name="DOC_COMMENT_TAG" value="6A8A6A"/>
+        <option name="SELECTION_FOREGROUND" value="1A3A1A"/>
+        <option name="INACTIVE_SELECTION_BACKGROUND" value="C4E4B4"/>
+
+        <!-- Цвета совпадающих скобок -->
+        <option name="MATCHED_BRACE_ATTRIBUTES" value="B4DBA4"/>
+        <option name="MATCHED_BRACE_BACKGROUND" value="C4EBB4"/>
+
+        <!-- Цвета для поиска -->
+        <option name="SEARCH_RESULT_ATTRIBUTES" value="B4DBA4"/>
+        <option name="TEXT_SEARCH_RESULT_ATTRIBUTES" value="B4DBA4"/>
+        <option name="WRITE_SEARCH_RESULT_ATTRIBUTES" value="A4CB94"/>
+
+        <!-- Цвета для отладки -->
+        <option name="DEBUGGER_INLINED_VALUES_BACKGROUND" value="D8ECD8"/>
+        <option name="DEBUGGER_INLINED_VALUES" value="2A4B2A"/>
+        <option name="EXECUTIONPOINT_ATTRIBUTES" value="C4E4B4"/>
+
+        <!-- Дополнительные цвета -->
+        <option name="INDENT_GUIDE" value="C8CCC8"/>
+        <option name="RIGHT_MARGIN_COLOR" value="C8CCC8"/>
+        <option name="TEARLINE_COLOR" value="D0D4D0"/>
+        <option name="WHITESPACES" value="A0A0A0"/>
     </colors>
     <attributes>
+        <!-- Базовые цвета текста -->
         <option name="TEXT">
-            <value FOREGROUND="1A3A1A"/>
+            <value FOREGROUND="1A3A1A" BACKGROUND="E0E4E0"/>
         </option>
         <option name="IDENTIFIER">
             <value FOREGROUND="2B4B2B"/>
         </option>
-        <option name="PROPERTY">
-            <value FOREGROUND="4A6B4A"/>
-        </option>
+
+        <!-- Ключевые слова -->
         <option name="KEYWORD">
-            <value FOREGROUND="2B4B2B" FONT_TYPE="1"/>
+            <value FOREGROUND="1A3A1A" FONT_TYPE="1"/>
         </option>
+        <option name="JAVA_KEYWORD">
+            <value FOREGROUND="1A3A1A" FONT_TYPE="1"/>
+        </option>
+
+        <!-- Строки и числа -->
         <option name="STRING">
-            <value FOREGROUND="5A7A5A"/>
+            <value FOREGROUND="3A5A3A"/>
+        </option>
+        <option name="JAVA_STRING">
+            <value FOREGROUND="3A5A3A"/>
         </option>
         <option name="NUMBER">
-            <value FOREGROUND="8A6A8A"/>
+            <value FOREGROUND="6A4A6A"/>
         </option>
+        <option name="JAVA_NUMBER">
+            <value FOREGROUND="6A4A6A"/>
+        </option>
+
+        <!-- Комментарии -->
         <option name="COMMENT">
-            <value FOREGROUND="6A7B6A" FONT_TYPE="2"/>
+            <value FOREGROUND="5A6B5A" FONT_TYPE="2"/>
         </option>
-        <option name="PHP_KEYWORD">
-            <value FOREGROUND="3A672F" FONT_TYPE="1"/>
+        <option name="JAVA_LINE_COMMENT">
+            <value FOREGROUND="5A6B5A" FONT_TYPE="2"/>
         </option>
-        <option name="PHP_VAR">
-            <value FOREGROUND="4A6B4A"/>
+        <option name="JAVA_BLOCK_COMMENT">
+            <value FOREGROUND="5A6B5A" FONT_TYPE="2"/>
         </option>
-        <option name="PHP_STRING">
-            <value FOREGROUND="7A9A6A"/>
+        <option name="JAVA_DOC_COMMENT">
+            <value FOREGROUND="4A5A4A" FONT_TYPE="2"/>
         </option>
-        <option name="PHP_NUMBER">
-            <value FOREGROUND="8A6A8A"/>
+
+        <!-- Классы и методы -->
+        <option name="CLASS_NAME">
+            <value FOREGROUND="1A3A1A"/>
         </option>
-        <option name="PHP_COMMENT">
-            <value FOREGROUND="7A8B7A" FONT_TYPE="2"/>
-        </option>
-        <option name="PHP_DOC_COMMENT">
-            <value FOREGROUND="6A8A6A" FONT_TYPE="2"/>
-        </option>
-        <option name="PHP_FUNCTION_CALL">
-            <value FOREGROUND="5A7A9A"/>
-        </option>
-        <option name="PHP_CONSTANT">
-            <value FOREGROUND="3A672F" FONT_TYPE="1"/>
-        </option>
-        <option name="PHP_CLASS">
-            <value FOREGROUND="3A672F"/>
-        </option>
-        <option name="PHP_OPERATION_SIGN">
-            <value FOREGROUND="2B4B2B" FONT_TYPE="1"/>
-        </option>
-        <option name="PHP_PREDEFINED_SYMBOL">
-            <value FOREGROUND="A85A5A"/>
-        </option>
-        <option name="PHP_EXEC_COMMAND_ID">
-            <value FOREGROUND="A85A5A"/>
-        </option>
-        <option name="HTML_TAG">
-            <value FOREGROUND="3A672F"/>
-        </option>
-        <option name="HTML_TAG_NAME">
-            <value FOREGROUND="3A672F"/>
-        </option>
-        <option name="HTML_ATTRIBUTE_NAME">
-            <value FOREGROUND="8A7A5A"/>
-        </option>
-        <option name="HTML_ATTRIBUTE_VALUE">
-            <value FOREGROUND="7A9A6A"/>
-        </option>
-        <option name="CSS_KEYWORD">
-            <value FOREGROUND="3A672F" FONT_TYPE="1"/>
-        </option>
-        <option name="CSS_STRING">
-            <value FOREGROUND="7A9A6A"/>
-        </option>
-        <option name="CSS_NUMBER">
-            <value FOREGROUND="8A6A8A"/>
-        </option>
-        <option name="CSS_COMMENT">
-            <value FOREGROUND="7A8B7A" FONT_TYPE="2"/>
-        </option>
-        <option name="CSS_PROPERTY_NAME">
-            <value FOREGROUND="4A6B4A"/>
-        </option>
-        <option name="CSS_PROPERTY_VALUE">
-            <value FOREGROUND="7A9A6A"/>
-        </option>
-        <option name="CSS_TAG_NAME">
-            <value FOREGROUND="3A672F"/>
-        </option>
-        <option name="CSS_CLASS_NAME">
-            <value FOREGROUND="5A8A8A"/>
-        </option>
-        <option name="CSS_PSEUDO">
-            <value FOREGROUND="6A8A8A"/>
-        </option>
-        <option name="JS_KEYWORD">
-            <value FOREGROUND="3A672F" FONT_TYPE="1"/>
-        </option>
-        <option name="JS_STRING">
-            <value FOREGROUND="7A9A6A"/>
-        </option>
-        <option name="JS_NUMBER">
-            <value FOREGROUND="8A6A8A"/>
-        </option>
-        <option name="JS_REGEXP">
-            <value FOREGROUND="8A7A5A"/>
-        </option>
-        <option name="JS_LINE_COMMENT">
-            <value FOREGROUND="7A8B7A" FONT_TYPE="2"/>
-        </option>
-        <option name="JS_BLOCK_COMMENT">
-            <value FOREGROUND="7A8B7A" FONT_TYPE="2"/>
-        </option>
-        <option name="JS_DOC_COMMENT">
-            <value FOREGROUND="6A8A6A" FONT_TYPE="2"/>
-        </option>
-        <option name="JS_OPERATION_SIGN">
-            <value FOREGROUND="3A672F" FONT_TYPE="1"/>
-        </option>
-        <option name="JS_PARENTHS">
-            <value FOREGROUND="8A9B8A"/>
-        </option>
-        <option name="JS_BRACKETS">
-            <value FOREGROUND="8A9B8A"/>
-        </option>
-        <option name="JS_BRACES">
-            <value FOREGROUND="8A9B8A"/>
-        </option>
-        <option name="JS_COMMA">
-            <value FOREGROUND="A0B0A0"/>
-        </option>
-        <option name="JS_DOT">
-            <value FOREGROUND="A0B0A0"/>
-        </option>
-        <option name="JS_SEMICOLON">
-            <value FOREGROUND="A0B0A0"/>
-        </option>
-        <option name="JS_FUNCTION_NAME">
-            <value FOREGROUND="3A672F"/>
-        </option>
-        <option name="JS_PARAMETER">
-            <value FOREGROUND="6A7A6A"/>
-        </option>
-        <option name="JS_LOCAL_VARIABLE">
-            <value FOREGROUND="4A6B4A"/>
-        </option>
-        <option name="JS_GLOBAL_VARIABLE">
-            <value FOREGROUND="3A672F" FONT_TYPE="1"/>
-        </option>
-        <option name="SQL_KEYWORD">
-            <value FOREGROUND="3A672F" FONT_TYPE="1"/>
-        </option>
-        <option name="SQL_STRING">
-            <value FOREGROUND="7A9A6A"/>
-        </option>
-        <option name="SQL_NUMBER">
-            <value FOREGROUND="8A6A8A"/>
-        </option>
-        <option name="SQL_COMMENT">
-            <value FOREGROUND="7A8B7A" FONT_TYPE="2"/>
-        </option>
-        <option name="SQL_IDENTIFIER">
-            <value FOREGROUND="4A6B4A"/>
-        </option>
-        <option name="BOOLEAN">
-            <value FOREGROUND="3A672F" FONT_TYPE="1"/>
-        </option>
-        <option name="CONSTANT">
-            <value FOREGROUND="3A672F" FONT_TYPE="1"/>
-        </option>
-        <option name="FUNCTION_DECLARATION">
-            <value FOREGROUND="3A672F"/>
+        <option name="JAVA_CLASS_NAME">
+            <value FOREGROUND="1A3A1A"/>
         </option>
         <option name="FUNCTION_CALL">
-            <value FOREGROUND="3A672F"/>
+            <value FOREGROUND="2A572F"/>
         </option>
-        <option name="CLASS_NAME">
-            <value FOREGROUND="2B4B2B"/>
+        <option name="JAVA_INSTANCE_METHOD">
+            <value FOREGROUND="2A572F"/>
         </option>
-        <option name="INTERFACE_NAME">
-            <value FOREGROUND="6A8A8A"/>
+        <option name="JAVA_STATIC_METHOD">
+            <value FOREGROUND="2A572F"/>
         </option>
-        <option name="ENUM_NAME">
-            <value FOREGROUND="5A8A8A" FONT_TYPE="1"/>
+        <option name="JAVA_CONSTRUCTOR">
+            <value FOREGROUND="2A572F"/>
         </option>
-        <option name="TYPE_PARAMETER_NAME">
-            <value FOREGROUND="5A8A8A"/>
-        </option>
-        <option name="PARAMETER">
-            <value FOREGROUND="6A7A6A"/>
-        </option>
+
+        <!-- Переменные -->
         <option name="LOCAL_VARIABLE">
-            <value FOREGROUND="4A6B4A"/>
+            <value FOREGROUND="2A4B2A"/>
         </option>
-        <option name="INSTANCE_FIELD">
-            <value FOREGROUND="5A7A5A"/>
+        <option name="JAVA_LOCAL_VARIABLE">
+            <value FOREGROUND="2A4B2A"/>
         </option>
-        <option name="INSTANCE_METHOD">
-            <value FOREGROUND="3A672F"/>
-        </option>
-        <option name="STATIC_FIELD">
-            <value FOREGROUND="3A672F" FONT_TYPE="1"/>
-        </option>
-        <option name="STATIC_METHOD">
-            <value FOREGROUND="3A672F"/>
-        </option>
-        <option name="PARENTHESES">
-            <value FOREGROUND="8A9B8A"/>
-        </option>
-        <option name="BRACKETS">
-            <value FOREGROUND="8A9B8A"/>
-        </option>
+
+        <!-- Скобки и пунктуация -->
         <option name="BRACES">
-            <value FOREGROUND="8A9B8A"/>
+            <value FOREGROUND="6A7B6A"/>
         </option>
-        <option name="COMMA">
-            <value FOREGROUND="A0B0A0"/>
+        <option name="JAVA_BRACES">
+            <value FOREGROUND="6A7B6A"/>
         </option>
-        <option name="DOT">
-            <value FOREGROUND="A0B0A0"/>
+
+        <!-- Критично важные атрибуты для всплывающих окон -->
+        <option name="COMPLETION_WINDOW">
+            <value BACKGROUND="E8ECE8" FOREGROUND="1A3A1A"/>
         </option>
-        <option name="SEMICOLON">
-            <value FOREGROUND="A0B0A0"/>
+
+        <option name="DOCUMENTATION_COLOR">
+            <value BACKGROUND="E8ECE8" FOREGROUND="1A3A1A"/>
         </option>
-        <option name="OPERATION_SIGN">
-            <value FOREGROUND="3A672F" FONT_TYPE="1"/>
+
+        <option name="INFORMATION_HINT">
+            <value BACKGROUND="D8ECD8" FOREGROUND="2A4B2A"/>
         </option>
-        <option name="DOC_COMMENT">
-            <value FOREGROUND="6A8A6A" FONT_TYPE="2"/>
-        </option>
-        <option name="DOC_COMMENT_TAG">
-            <value FOREGROUND="6A8A6A" FONT_TYPE="2"/>
-        </option>
-        <option name="DOC_COMMENT_TAG_VALUE">
-            <value FOREGROUND="6A8A6A" FONT_TYPE="2"/>
-        </option>
-        <option name="MARKDOWN_HEADER">
-            <value FOREGROUND="3A672F" FONT_TYPE="1"/>
-        </option>
-        <option name="MARKDOWN_BOLD">
-            <value FOREGROUND="3A672F" FONT_TYPE="1"/>
-        </option>
-        <option name="MARKDOWN_ITALIC">
-            <value FOREGROUND="8A7A6A" FONT_TYPE="2"/>
-        </option>
-        <option name="MARKDOWN_LINK">
-            <value FOREGROUND="5A7A9A" FONT_TYPE="2"/>
-        </option>
-        <option name="MARKDOWN_CODE">
-            <value FOREGROUND="7A9A6A"/>
-        </option>
-        <option name="TODO">
-            <value FOREGROUND="5A8A8A"/>
-        </option>
-        <option name="HYPERLINK_ATTRIBUTES">
-            <value FOREGROUND="5A8A8A"/>
-        </option>
-        <option name="FOLLOWED_HYPERLINK_ATTRIBUTES">
-            <value FOREGROUND="5A8A8A"/>
-        </option>
-        <option name="SEARCH_RESULT_ATTRIBUTES">
-            <value FOREGROUND="E4EBDD"/>
-        </option>
-        <option name="WRITE_SEARCH_RESULT_ATTRIBUTES">
-            <value FOREGROUND="E4EBDD"/>
+
+        <option name="INLINE_HINT">
+            <value FOREGROUND="5A6B5A"/>
         </option>
     </attributes>
 </scheme>
